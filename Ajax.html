@@ -3,9 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+    <style>
+        body{
+            background-color: blue;
+            margin:0;
+            padding:0;
+            color:white;
+            font-size:30px;
+        }
+    </style>
 </head>
 
 <body>
+    Ajax it Up!!!!!!
     <script type="text/javascript">
         $.ajax("text.txt").done(function(data){
             alert(data);
