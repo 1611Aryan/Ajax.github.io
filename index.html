@@ -5,22 +5,27 @@
 <title>Untitled Document</title>
     <style>
         body{
-            background-color: blue;
+            background-color: navy;
             margin:0;
             padding:0;
-            color:white;
-            font-size:30px;
+            color:yellow;
+            font-size:90px;
+        }
+        p{
+            padding:50px;
+            width:15%;
+            margin:0 auto;
         }
     </style>
 </head>
     <script type="text/javascript" src="jquery/jquery.min.js"></script>
 <body>
-    Ajax it Up!!!!!!
+    <p id="text"></p>
     <script type="text/javascript">
         $.ajax("text.txt").done(function(data){
-            alert(data);
-        }).fail(function(data){
-            alert("error");
+         $("#text").html(data) ;  
+        }).fail(function(){
+            $("#text").html("error");  
         });
     </script>
 </body>
